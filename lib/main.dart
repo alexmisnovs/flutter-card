@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  'FRONTEMD DEVELOPER',
+                  'FRONTEND DEVELOPER',
                   style: TextStyle(
                     fontFamily: 'Source Sans Pro',
                     fontSize: 20,
