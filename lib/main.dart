@@ -9,98 +9,100 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         home: Scaffold(
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.orange.shade300,
       body: SafeArea(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              CircleAvatar(
-                radius: 50,
-                backgroundColor: Colors.teal,
-                child: ClipOval(
-                  child: Image.asset(
-                    'assets/avatar.png',
-                    width: 100,
-                    height: 100,
-                    fit: BoxFit.cover,
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
+          child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 50,
+                  backgroundColor: Colors.orange.shade200,
+                  child: ClipOval(
+                    child: Image.asset(
+                      'assets/avatar.png',
+                      width: 100,
+                      height: 100,
+                      fit: BoxFit.cover,
+                    ),
                   ),
                 ),
-              ),
-              Text(
-                'Stewie Griffin',
-                style: TextStyle(
-                  fontFamily: 'Roboto',
-                  fontSize: 40,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+                SizedBox(
+                  height: 15,
                 ),
-              ),
-              Text(
-                'REACT DEVELOPER',
-                style: TextStyle(
-                  fontFamily: 'Source Sans Pro',
-                  fontSize: 20,
-                  color: Colors.teal.shade100,
-                  letterSpacing: 2.5,
-                  fontWeight: FontWeight.bold,
+                Text(
+                  'Stewie Griffin',
+                  style: TextStyle(
+                    fontFamily: 'Roboto',
+                    fontSize: 40,
+                    color: Colors.orange.shade900,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                width: double.infinity,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      Icons.phone,
-                      size: 15,
-                      color: Colors.teal.shade800,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text('+44 1231231',
+                Text(
+                  'FRONTEMD DEVELOPER',
+                  style: TextStyle(
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 20,
+                    color: Colors.orange.shade900,
+                    letterSpacing: 2.5,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                  width: double.infinity,
+                  child: Divider(
+                    color: Colors.white,
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(vertical: 15),
+                  color: Colors.white70,
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Colors.orange,
+                      ),
+                      title: Text(
+                        '+44 123123123',
                         style: TextStyle(
                           fontFamily: 'Source Sans Pro',
                           fontSize: 20,
-                          color: Colors.teal.shade800,
-                          letterSpacing: 2.5,
+                          color: Colors.orange.shade900,
                           fontWeight: FontWeight.bold,
-                        ))
-                  ],
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 10, horizontal: 25),
-                padding: EdgeInsets.all(10),
-                width: double.infinity,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Icon(
-                      Icons.email,
-                      size: 15,
-                      color: Colors.teal.shade800,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text('aleksandrmisnov@gmail.com',
+                Card(
+                  color: Colors.white70,
+                  child: Padding(
+                    padding: const EdgeInsets.all(5.0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.email,
+                        color: Colors.orange,
+                      ),
+                      title: Text(
+                        'alex@misnov.com',
                         style: TextStyle(
                           fontFamily: 'Source Sans Pro',
-                          fontSize: 15,
-                          color: Colors.teal.shade800,
-                          letterSpacing: 2.5,
+                          fontSize: 20,
+                          color: Colors.orange.shade900,
                           fontWeight: FontWeight.bold,
-                        ))
-                  ],
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ]),
+              ]),
+        ),
       ),
     ));
   }
